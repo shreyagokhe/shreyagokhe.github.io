@@ -3,7 +3,7 @@ title: Portfolio
 description: >
   Shreya Gokhe Portfolio. A Master's in Data Science student.
 
-baseurl:  # the subpath of your site, e.g. /blog/
+baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://shreyagokhe.github.io" # the base hostname & protocol for your site
 
 author:
