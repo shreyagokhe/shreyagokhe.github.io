@@ -1,5 +1,5 @@
 # Pudhina
-A simple, minimal [Jekyll](jekyllrb.com) theme for a personal web page and blog, focusing on white space and readability
+A simple, minimal Jekyll theme for a personal web page and blog, focusing on white space and readability
 
 ## Features
 - Simple, minimal and clean
