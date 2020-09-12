@@ -3,13 +3,18 @@
   body {
     font-family: 'Quicksand', sans-serif;  
     font-size: 100%;
-    color: #012;
+    color: #303c6c;
     background-color: #fff; }
 
   a {
-    color: #57A;
+    color: #f4976c;
     font-weight: bold;
     text-decoration: none; }
+	
+  span{
+	  background-color: #fae5d7;
+	  font-family: 'Quicksand', sans-serif;
+ }
 
   p, ul, ol, dl {
     font-size: 100%;
@@ -17,7 +22,9 @@
 
   img {
     display: block;
-    max-width: 100%; }
+    max-width: 25%; 
+	margin-left: auto;
+  margin-right: auto;}
 
   blockquote {
     letter-spacing: 3px;
@@ -29,7 +36,7 @@
     position: relative; }
     blockquote footer {
       position: absolute;
-      bottom: -35px;
+     /* bottom: -35px;*/
       font-size: 80%;
       color: #333333;
       letter-spacing: 0px;
@@ -38,11 +45,11 @@
     blockquote p {
       display: inline;
       font-size: 120%;
-      color: #828282;
+      color: #b4efd5;
       font-weight: 400; }
 
   strong {
-    color: #20a882; }
+    color: #fff; }
 
   .wrapper {
     max-width: 90%;
@@ -52,7 +59,7 @@
   .header {
     overflow: hidden; 
 	padding: 30px;
-	background: #1abc9c;
+	background: #303c6c;
 	color: white;
 	font-size: 20px;
 	position: top;}
@@ -63,11 +70,11 @@
   .logo {
     font-size: 200%;
     font-weight: 700;
-    color: #026670;
+    color: #fff;
     display: block; }
 
   .menu {
-    color: #828282;
+    color: #f4976c;
     font-size: 100%;
     margin: 0px;
     margin-top: 6px;
@@ -86,12 +93,21 @@
   .social-links {
     float: right;
     font-size: 150%;
-    color: #828282;
+    color: #f4976c;
     list-style-type: none; }
 
   .social-links__entry {
     display: inline-block;
-    margin-left: 10px; }
+    margin-left: 10px; 
+	color:#f4976c;
+/*text-align:center;*/
+  transition: all 0.2s;}
+
+.social-links__entry:hover{
+color:#fff;
+background-color:#303c6c;
+}
+	
 
 /* =Titles *//*************************************************************/
   .page-title {
@@ -103,9 +119,9 @@
     font-size: 150%; }
 
   .page-title__subtitle {
-    font-weight: 400;
+    font-weight: bold;
     font-size: 75%;
-    color: #828282; }
+    color: #f4976c; }
 
 /* =Post teasers *//*************************************************************/
   .list-posts {
@@ -118,13 +134,13 @@
 
   .post-teaser__title {
     font-size: 100%;
-    color: #828282; }
+    color: #f4976c; }
 
   .post-teaser__date {
     font-size: 100%;
     float: right;
     vertical-align: middle;
-    color: #828282; }
+    color: #f4976c; }
 
   .post-teaser__month {
     width: 100%;
@@ -139,7 +155,7 @@
 
 /* =Post page *//*************************************************************/
   .about {
-    color: #828282;
+    color: #f4976c;
     text-align: center;
     line-height: 24px; }
 
@@ -159,7 +175,7 @@
   .PageNavigation {
     display: block;
     width: auto;
-    overflow: hidden;
+    overflow: auto;
   }
 
   .PageNavigation a {
@@ -445,13 +461,158 @@
   /* Custom */
   .go-home {
     text-align: center; }
-	
+
+.grid {
+    position: relative;
+    margin: 0 auto;
+    padding: 1em 0 4em;
+    max-width: 1000px;
+    list-style: none;
+    text-align: center;
+}
+
+/* Common style */
+.grid figure {
+    position: relative;
+    float: left;
+    overflow: hidden;
+    margin: 10px 1%;
+    min-width: 320px;
+    max-width: 480px;
+    max-height: 360px;
+    width: 48%;
+    background: #fff /*#303c6c;*/
+    text-align: center;
+    cursor: pointer;
+}
+
+.grid figure img {
+    position: relative;
+    display: block;
+    min-height: 100%;
+    max-width: 100%;
+    opacity: 0.9;
+}
+
+.grid figure figcaption {
+    padding: 2em;
+    color: #303c6c;
+    /*text-transform: uppercase;*/
+    font-size: 1.2em;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+    pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+    z-index: 1000;
+    text-indent: 200%;
+    white-space: nowrap;
+    font-size: 0;
+    opacity: 0;
+}
+
+.grid figure h2 {
+    word-spacing: -0.15em;
+    font-weight: 700;
+}
+
+.grid figure h2 span {
+    font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+    margin: 0;
+}
+
+.grid figure p {
+    letter-spacing: 1px;
+    font-size: 68.5%;
+}
+
+figure.effect-lily img {
+    max-width: none;
+    width: -webkit-calc(100% + 50px);
+    width: calc(100% + 50px);
+    opacity: 0.7;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: translate3d(-40px,0, 0);
+    transform: translate3d(-40px,0,0);
+}
+
+figure.effect-lily figcaption {
+    text-align: left;
+}
+
+figure.effect-lily figcaption > div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 2em;
+    width: 100%;
+    height: 50%;
+}
+
+figure.effect-lily h2,
+figure.effect-lily p {
+    -webkit-transform: translate3d(0,40px,0);
+    transform: translate3d(0,40px,0);
+}
+
+figure.effect-lily h2 {
+    -webkit-transition: -webkit-transform 0.35s;
+    transition: transform 0.35s;
+}
+
+figure.effect-lily p {
+    color: rgba(48,60,108,0.8);
+    opacity: 0;
+    -webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
+    transition: opacity 0.2s, transform 0.35s;
+}
+
+figure.effect-lily:hover img,
+figure.effect-lily:hover p {
+    opacity: 1;
+}
+
+figure.effect-lily:hover img,
+figure.effect-lily:hover h2,
+figure.effect-lily:hover p {
+    -webkit-transform: translate3d(0,0,0);
+    transform: translate3d(0,0,0);
+}
+
+figure.effect-lily:hover p {
+    -webkit-transition-delay: 0.05s;
+    transition-delay: 0.05s;
+    -webkit-transition-duration: 0.35s;
+    transition-duration: 0.35s;
+}
+
 	.footer {
   position: bottom;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #EDEAE5;
+  background-color: #303c6c;
   text-align: center;
   font-size: 70%;
   height: 30px;
@@ -459,20 +620,20 @@
 	.btn{
 	display:inline-block;
 padding:0.35em 1.2em;
-border:0.1em solid #1abc9c;
+border:0.1em solid #f4976c;
 margin:0 0.3em 0.3em 0;
 border-radius:0.12em;
 box-sizing: border-box;
 text-decoration:none;
 font-family:'Quicksand',sans-serif;
 font-weight:300;
-color:#1abc9c;
+color:#f4976c;
 text-align:center;
 transition: all 0.2s;
 }
 .btn:hover{
 color:#000000;
-background-color:#1abc9c;
+background-color:#f4976c;
 }
 @media all and (max-width:30em){
 .btn{
@@ -480,4 +641,15 @@ display:block;
 margin:0.4em auto;
 }
 }
-	
+
+.butn{
+font-family:'Quicksand',sans-serif;
+font-weight:300;
+color:#f4976c;
+/*text-align:center;*/
+transition: all 0.2s;
+}
+.butn:hover{
+color:#fff;
+background-color:#303c6c;
+}
