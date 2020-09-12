@@ -7,7 +7,7 @@
     background-color: #fff; }
 
   a {
-    color: #57A;
+    color: #f4976c;
     font-weight: bold;
     text-decoration: none; }
 
@@ -38,11 +38,11 @@
     blockquote p {
       display: inline;
       font-size: 120%;
-      color: #828282;
+      color: #b4efd5;
       font-weight: 400; }
 
   strong {
-    color: #20a882; }
+    color: #fff; }
 
   .wrapper {
     max-width: 90%;
@@ -52,7 +52,7 @@
   .header {
     overflow: hidden; 
 	padding: 30px;
-	background: #1abc9c;
+	background: #303c6c;
 	/*color: white;*/
 	font-size: 20px;
 	position: top;}
@@ -63,11 +63,11 @@
   .logo {
     font-size: 200%;
     font-weight: 700;
-    color: #026670;
+    color: #fff;
     display: block; }
 
   .menu {
-    color: #828282;
+    color: #f4976c;
     font-size: 100%;
     margin: 0px;
     margin-top: 6px;
@@ -86,12 +86,20 @@
   .social-links {
     float: right;
     font-size: 150%;
-    color: #828282;
+    color: #f4976c;
     list-style-type: none; }
 
   .social-links__entry {
     display: inline-block;
-    margin-left: 10px; }
+    margin-left: 10px;
+	color:#f4976c;
+/*text-align:center;*/
+  transition: all 0.2s;}
+
+.social-links__entry:hover{
+color:#fff;
+background-color:#303c6c;
+}
 
 /* =Titles *//*************************************************************/
   .page-title {
@@ -105,7 +113,7 @@
   .page-title__subtitle {
     font-weight: 400;
     font-size: 75%;
-    color: #828282; }
+    color: #f4976c; }
 	
 	
 	
@@ -120,13 +128,13 @@
 
   .post-teaser__title {
     font-size: 100%;
-    color: #828282; }
+    color: #f4976c; }
 
   .post-teaser__date {
     font-size: 100%;
     float: right;
     vertical-align: middle;
-    color: #828282; }
+    color: #f4976c; }
 
   .post-teaser__month {
     width: 100%;
@@ -422,145 +430,173 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #EDEAE5;
+  background-color: #303c6c;
   text-align: center;
   font-size: 70%;
   height: 30px;
   
 }
 
-*{
-  box-sizing: border-box;
+body{
+  padding:0;
+  margin:0;
+  font-family: 'Quicksand', sans-serif;
 }
-
-body {
-  background-color: #fff;
-  font-family: "Quicksand", sans-serif;
+h1{
+  font-size:32px;
+  text-align:center;
 }
-
-/* The actual timeline (the vertical ruler) */
-.timeline {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
+.timeline{
+  position:relative;
+  margin:50px auto;
+  padding:40px 0;
+  width:1000px;
+  box-sizing:border-box;
 }
-
-/* The actual timeline (the vertical ruler) */
-.timeline::after {
-  content: '';
-  position: absolute;
-  width: 6px;
-  background-color: white;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -3px;
+.timeline:before{
+  content:'';
+  position:absolute;
+  left:50%;
+  width:2px;
+  height:100%;
+  background:#303c6c;
 }
-
-/* Container around content */
-.container {
-  padding: 10px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
-  border-color: #1abc9c;
+.timeline ul{
+  padding:0;
+  margin:0;
 }
-
-/* The circles on the timeline */
-.container::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -17px;
-  background-color: white;
-  border: 4px solid #FF9F55;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
+.timeline ul li{
+  list-style:none;
+  position:relative;
+  width:50%;
+  padding:20px 40px;
+  box-sizing:border-box;
 }
-
-/* Place the container to the left */
-.left {
-  left: 0;
+.timeline ul li:nth-child(odd){
+  float:left;
+  text-align:right;
+  clear:both;
 }
-
-/* Place the container to the right */
-.right {
-  left: 50%;
+.timeline ul li:nth-child(even){
+  float:right;
+  text-align:left;
+  clear:both;
 }
-
-/* Add arrows to the left container (pointing right) */
-.left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid white;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
+.content{
+  padding-bottom:20px;
 }
-
-/* Add arrows to the right container (pointing left) */
-.right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
+.timeline ul li:nth-child(odd):before
+{
+  content:'';
+  position:absolute;
+  width:10px;
+  height:10px;
+  top:24px;
+  right:-6px;
+  background:#f4976c;
+  border-radius:50%;
+  box-shadow:0 0 0 3px rgba(48,60,108);
 }
-
-/* Fix the circle for containers on the right side */
-.right::after {
-  left: -16px;
+.timeline ul li:nth-child(even):before
+{
+  content:'';
+  position:absolute;
+  width:10px;
+  height:10px;
+  top:24px;
+  left:-4px;
+  background:#f4976c;
+  border-radius:50%;
+  box-shadow:0 0 0 3px rgba(48,60,108);
 }
-
-/* The actual content */
-.content {
-  padding: 20px 30px;
-  background-color: white;
-  position: relative;
-  border-radius: 6px;
+.timeline ul li h3{
+  padding:0;
+  margin:0;
+  color:#f4976c;
+  font-weight:600;
 }
-
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
-  /* Place the timelime to the left */
-  .timeline::after {
-  left: 31px;
+.timeline ul li p{
+  margin:10px 0 0;
+  padding:0;
+}
+.timeline ul li .time h4{
+  margin:0;
+  padding:0;
+  font-size:14px;
+}
+.timeline ul li:nth-child(odd) .time
+{
+  position:absolute;
+  top:12px;
+  right:-165px;
+  margin:0;
+  padding:8px 16px;
+  background:#f4976c;
+  color:#fff;
+  border-radius:18px;
+  box-shadow:0 0 0 3px rgb(244,151,108,0.4);
+}
+.timeline ul li:nth-child(even) .time
+{
+  position:absolute;
+  top:12px;
+  left:-165px;
+  margin:0;
+  padding:8px 16px;
+  background:#f4976c;
+  color:#fff;
+  border-radius:18px;
+  box-shadow:0 0 0 3px rgb(244,151,108,0.4);
+}
+@media(max-width:1000px)
+{
+  .timeline{
+    width:100%;
   }
-  
-  /* Full-width containers */
-  .container {
-  width: 100%;
-  padding-left: 70px;
-  padding-right: 25px;
-  border-color: 1abc9c;
+}
+@media(max-width:767px){
+  .timeline{
+    width:100%;
+    padding-bottom:0;
   }
-  
-  /* Make sure that all arrows are pointing leftwards */
-  .container::before {
-  left: 60px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
+  h1{
+    font-size:40px;
+    text-align:center;
   }
+  .timeline:before{
+    left:20px;
+    height:100%;
+  }
+  .timeline ul li:nth-child(odd),
+  .timeline ul li:nth-child(even)
+  {
+    width:100%;
+    text-align:left;
+    padding-left:50px;
+    padding-bottom:50px;
+  }
+  .timeline ul li:nth-child(odd):before,
+  .timeline ul li:nth-child(even):before
+  {
+    top:-18px;
+    left:16px;
+  }
+  .timeline ul li:nth-child(odd) .time,
+  .timeline ul li:nth-child(even) .time{
+    top:-30px;
+    left:50px;
+    right:inherit;
+  }
+}
 
-  /* Make sure all circles are at the same spot */
-  .left::after, .right::after {
-  left: 15px;
-  }
-  
-  /* Make all right containers behave like the left ones */
-  .right {
-  left: 0%;
-  }
+.butn{
+font-family:'Quicksand',sans-serif;
+font-weight:300;
+color:#f4976c;
+/*text-align:center;*/
+transition: all 0.2s;
+}
+.butn:hover{
+color:#fff;
+background-color:#303c6c;
 }

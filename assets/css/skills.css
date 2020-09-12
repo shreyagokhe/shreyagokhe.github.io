@@ -7,9 +7,16 @@
     background-color: #fff; }
 
   a {
-    color: #57A;
+    color: #f4976c;
     font-weight: bold;
     text-decoration: none; }
+
+  b{
+	  font-weight: 400;
+	  font-size: 90%;
+	  color: #303c6c;
+	  font-size: 110%;
+  }	
 
   p, ul, ol, dl {
     font-size: 100%;
@@ -38,11 +45,11 @@
     blockquote p {
       display: inline;
       font-size: 120%;
-      color: #828282;
+      color: #b4efd5;
       font-weight: 400; }
 
   strong {
-    color: #20a882; }
+    color: #fff; }
 
   .wrapper {
     max-width: 90%;
@@ -52,7 +59,7 @@
   .header {
     overflow: hidden; 
 	padding: 30px;
-	background: #1abc9c;
+	background: #303c6c;
 	color: white;
 	font-size: 20px;
 	position: top;}
@@ -63,11 +70,11 @@
   .logo {
     font-size: 200%;
     font-weight: 700;
-    color: #026670;
+    color: #fff;
     display: block; }
 
   .menu {
-    color: #828282;
+    color: #f4976c;
     font-size: 100%;
     margin: 0px;
     margin-top: 6px;
@@ -86,13 +93,42 @@
   .social-links {
     float: right;
     font-size: 150%;
-    color: #828282;
+    color: #f4976c;
     list-style-type: none; }
 
   .social-links__entry {
     display: inline-block;
-    margin-left: 10px; }
+    margin-left: 10px;
+	color:#f4976c;
+/*text-align:center;*/
+  transition: all 0.2s;}
 
+.social-links__entry:hover{
+color:#fff;
+background-color:#303c6c;
+}
+.content {
+    width:100%;
+    min-width:1500px;
+    height:auto;
+}
+.articles{
+    width:96%; /*Takes 90% width from WebContainer*/
+    height: auto;
+    margin: auto;
+} 
+.des {
+    margin-left: 15px;
+    -webkit-box-ordinal-group: 2; /* iOS 6-, Safari, Opera*/
+    -moz-box-ordinal-group: 2; /* Firefox*/
+    -ms-flex-order: 2; /* IE 10 */
+    -webkit-order: 2; /* Chrome */
+    flex-order: 2;
+    width: 70%;
+    /*height: 140px;*/
+    
+    /*padding: 5px;*/
+}
 /* =Titles *//*************************************************************/
   .page-title {
     margin: 30px auto;
@@ -105,7 +141,7 @@
   .page-title__subtitle {
     font-weight: 400;
     font-size: 75%;
-    color: #828282; }
+    color: #f4976c; }
 	
 	
 	
@@ -120,13 +156,13 @@
 
   .post-teaser__title {
     font-size: 100%;
-    color: #828282; }
+    color: #f4976c; }
 
   .post-teaser__date {
     font-size: 100%;
     float: right;
     vertical-align: middle;
-    color: #828282; }
+    color: #f4976c; }
 
   .post-teaser__month {
     width: 100%;
@@ -204,11 +240,11 @@
   }
   
   .footer {
-  position: fixed;
+  position: bottom;
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #EDEAE5;
+  background-color: #303c6c;
   text-align: center;
   font-size: 70%;
   height: 30px;
@@ -425,27 +461,15 @@
       text-shadow: -1px 0 0 blue, 1px 0 0 lime; }
     100% {
       text-shadow: -1px 0 0 blue, 1px 0 0 lime; } }
-  /* Custom */
-  .go-home {
-    text-align: center; }
-	
-	/* Make sure that padding behaves as expected */
-* {box-sizing:border-box}
-
-/* Container for skill bars */
-.container {
-  width: 100%; /* Full width */
-  background-color: #ddd; /* Grey background */
+  
+.butn{
+font-family:'Quicksand',sans-serif;
+font-weight:300;
+color:#f4976c;
+/*text-align:center;*/
+transition: all 0.2s;
 }
-
-.skills {
-  text-align: right; /* Right-align text */
-  padding-top: 10px; /* Add top padding */
-  padding-bottom: 10px; /* Add bottom padding */
-  color: white; /* White text color */
+.butn:hover{
+color:#fff;
+background-color:#303c6c;
 }
-
-.html {width: 90%; background-color: #4CAF50;} /* Green */
-.css {width: 80%; background-color: #2196F3;} /* Blue */
-.js {width: 65%; background-color: #f44336;} /* Red */
-.php {width: 60%; background-color: #808080;} /* Dark Grey */
